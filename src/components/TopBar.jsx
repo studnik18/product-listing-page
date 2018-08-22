@@ -9,7 +9,7 @@ const TopBar = () => (
 		</div>
 		<div className="TopBar-filters">
 			<p>Color filter</p>
-			<Filter />
+			<FiltersDropdown />
 			<p>Category filter</p>
 		</div>
 	</div>
