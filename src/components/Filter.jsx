@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 import { addFilter, removeFilter } from '../redux/actions';
 
 const Filter = props => {
-	const { addFilter, removeFilter } = props;
+	const { addFilter, removeFilter, value } = props;
 	return (
 		<div>
-			Filter
+			{value}
 			<input type="checkbox" onClick={(e) => {
-				e.target.checked ? addFilter('Filter') : removeFilter("Filter")
+				e.target.checked ? addFilter(value) : removeFilter(value)
 			}}/>
 		</div>		
 	)
@@ -17,7 +17,8 @@ const Filter = props => {
 
 Filter.propTypes = {
 	addFilter: PropTypes.func.isRequired,
-	removeFilter: PropTypes.func.isRequired
+	removeFilter: PropTypes.func.isRequired,
+	value: PropTypes.string.isRequired
 }
 
 const mapDispatchToProps = dispatch => ({

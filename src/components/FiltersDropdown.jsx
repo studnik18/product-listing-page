@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import Filter from './Filter';
 import Popover from '@material-ui/core/Popover';
 
@@ -25,27 +26,34 @@ class FiltersDropdown extends Component {
 
 	render() {
 		const { anchorEl } = this.state;
+		const { filteringCategory, children } = this.props;
 		const open = Boolean(anchorEl);
 		return (
 			<Fragment>
 				<button onClick={this.handleClick}>
-					Filters
+					{filteringCategory}
 				</button>
 				<Popover 
 					open={open}
 					anchorEl={anchorEl}
 					anchorOrigin={{
-						vertical: 'bottom'
+						vertical: 'bottom',
+						horizontal: 'left'
 					}}
 					onClose={this.handleClose}
 				>
 
-						<Filter />
+					{children}
 
 				</Popover>
 			</Fragment>
 		)
 	}
+}
+
+FiltersDropdown.propTypes = {
+	filteringCategory: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired
 }
 
 export default FiltersDropdown;
