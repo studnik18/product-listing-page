@@ -1,4 +1,5 @@
 import React from 'react';
+import FiltersDropdown from './FiltersDropdown'
 import Filter from './Filter'
 
 const TopBar = () => (

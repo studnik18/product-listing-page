@@ -2,7 +2,9 @@ export const products = [
 	{
 		id: 1,
 		name: "Prod 1",
-		category: "category1",
+		categories: [
+			"category1"
+		],
 		variants: [
 			{
 				color: "color 1",
@@ -15,7 +17,8 @@ export const products = [
 			{
 				color: "color3",
 				price: "450$"
-			}
-		]
+			},
+		],
+		activeVariant: 1
 	}
 ];
