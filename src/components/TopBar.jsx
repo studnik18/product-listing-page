@@ -9,13 +9,13 @@ const TopBar = () => (
 		</div>
 		<div className="TopBar-filters">
 			<p>Filter by:</p>
-			<FiltersDropdown filteringCategory="Category">
+			<FiltersDropdown filterType="Category">
 				<Filter value="Road" />
 				<Filter value="City" />
 				<Filter value="Mountain" />
 				<Filter value="Trekking" />
 			</FiltersDropdown>
-			<FiltersDropdown filteringCategory="Color">
+			<FiltersDropdown filterType="Color">
 				<Filter value="Blue" />
 				<Filter value="Black" />
 				<Filter value="Red" />
