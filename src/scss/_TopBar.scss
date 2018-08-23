@@ -1,0 +1,9 @@
+.TopBar {
+	display: flex;
+	flex-direction: column;
+	background-color: $mahogany;
+	.TopBar-header {
+		display: flex;
+		flex-direction: row;
+	}
+}

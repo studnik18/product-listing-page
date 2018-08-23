@@ -1,0 +1,15 @@
+@import './scss/variables';
+
+@import './scss/TopBar';
+@import './scss/Footer';
+@import './scss/ProductsList';
+
+
+#root {
+	height: 100%;
+}
+
+.App {
+	min-height: 100%;
+	position: relative;
+}
