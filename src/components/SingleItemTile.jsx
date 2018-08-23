@@ -1,25 +1,15 @@
 import React from 'react';
 import VariantsBox from './VariantsBox'
+import { checkCategoryFilter } from '../lib/checkCategoryFilter';
+import { checkColorFilter } from '../lib/checkColorFilter';
 import { connect } from 'react-redux';
 
-const checkCategoryFilter = (productCategoriesArray, appliedCategoryFiltersArray) => {
-	let shouldProductBeDisplayed = false;
-	productCategoriesArray.map(category => { 
-		if (
-			appliedCategoryFiltersArray.includes(category) || 
-			appliedCategoryFiltersArray.length === 0
-		) {
-			shouldProductBeDisplayed = true;
-		}
-	})
-	return shouldProductBeDisplayed;
-}
-
-const SingleItemTile = ({ name, categories, variants, filters }) => {
-	console.log(checkCategoryFilter(categories, filters.Category))
+const SingleItemTile = ({ name, img, categories, variants, filters }) => {
 	return (
-		checkCategoryFilter(categories, filters.Category)
+		checkCategoryFilter(categories, filters.Category) && 
+		checkColorFilter(variants, filters.Color)
 		? <div className="SingleItemTile">
+				<img />
 				<p>{name}</p>
 				<VariantsBox variants={variants} />
 			</div>

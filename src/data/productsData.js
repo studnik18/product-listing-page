@@ -256,21 +256,6 @@ export const products = [
 				price: "330$",
 				img: ""
 			},
-			{
-				color: "Blue",
-				price: "380$",
-				img: ""
-			},
-			{
-				color: "Yellow",
-				price: "420$",
-				img: ""
-			},
-			{
-				color: "White",
-				price: "440$",
-				img: ""
-			},
 		],
 		activeVariant: 1
 	},
