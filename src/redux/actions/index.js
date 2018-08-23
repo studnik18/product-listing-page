@@ -1,11 +1,13 @@
 import * as actionTypes from '../constants/actionTypes';
 
-export const addFilter = filter => ({
+export const addFilter = (filterName, filterType) => ({
 	type: actionTypes.ADD_FILTER,
-	filter
+	filterName,
+  filterType
 })
 
-export const removeFilter = filter => ({
+export const removeFilter = (filterName, filterType) => ({
 	type: actionTypes.REMOVE_FILTER,
-	filter
+	filterName,
+  filterType
 })

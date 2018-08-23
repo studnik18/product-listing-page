@@ -1,27 +1,31 @@
 import * as actionTypes from '../constants/actionTypes';
 
-const initialState = { filters: [] };
+const initialState = { filters: { Category: [], Color: [] }};
 
 export const handleFilters = ( state = initialState, action ) => {
 	switch(action.type) {
 		case actionTypes.ADD_FILTER :
-			return { 
-				...state, 
-				filters: [
-					...state.filters, action.filter
-				] 
-			};
-		case actionTypes.REMOVE_FILTER :
-			const removedFilterIndex = state.filters.find(filter =>
-				filter === action.filter
-			).indexOf(action.filter)
 			return {
 				...state,
-				filters: [
-					...state.filters.slice(0, removedFilterIndex),
-					...state.filters.slice(removedFilterIndex + 1)
-				]
-			}
+				filters: {
+					...state.filters,
+					[action.filterType]: [
+						...state.filters[action.filterType], action.filterName
+					]
+				}
+			};
+		case actionTypes.REMOVE_FILTER :
+			const removedFilterIndex = state.filters[action.filterType].indexOf(action.filterName);
+			return {
+				...state,
+				filters: {
+					...state.filters,
+					[action.filterType]: [
+						...state.filters[action.filterType].slice(0, removedFilterIndex),
+						...state.filters[action.filterType].slice(removedFilterIndex + 1)
+					]
+				}
+			};
 		default :
 			return state;
 	}

@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import { addFilter, removeFilter } from '../redux/actions';
 
 const Filter = props => {
-	const { addFilter, removeFilter, value } = props;
+	const { addFilter, removeFilter, value, filterType } = props;
 	return (
 		<div>
 			{value}
 			<input type="checkbox" onClick={(e) => {
-				e.target.checked ? addFilter(value) : removeFilter(value)
+				e.target.checked ? addFilter(value, filterType) : removeFilter(value, filterType)
 			}}/>
-		</div>		
+		</div>
 	)
 }
 
@@ -22,11 +22,11 @@ Filter.propTypes = {
 }
 
 const mapDispatchToProps = dispatch => ({
-	addFilter: filter => {
-		dispatch(addFilter(filter))
+	addFilter: (filterName, filterType) => {
+		dispatch(addFilter(filterName, filterType))
 	},
-	removeFilter: filter => {
-		dispatch(removeFilter(filter))
+	removeFilter: (filterName, filterType) => {
+		dispatch(removeFilter(filterName, filterType))
 	},
 })
 

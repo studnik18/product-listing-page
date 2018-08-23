@@ -26,14 +26,14 @@ class FiltersDropdown extends Component {
 
 	render() {
 		const { anchorEl } = this.state;
-		const { filteringCategory, children } = this.props;
+		const { filterType, children } = this.props;
 		const open = Boolean(anchorEl);
 		return (
 			<Fragment>
 				<button onClick={this.handleClick}>
-					{filteringCategory}
+					{filterType}
 				</button>
-				<Popover 
+				<Popover
 					open={open}
 					anchorEl={anchorEl}
 					anchorOrigin={{
@@ -42,9 +42,11 @@ class FiltersDropdown extends Component {
 					}}
 					onClose={this.handleClose}
 				>
-
-					{children}
-
+          {React.Children.map(
+            children,
+            child => React.cloneElement(
+              child, {filterType}
+          ))}
 				</Popover>
 			</Fragment>
 		)
@@ -52,7 +54,7 @@ class FiltersDropdown extends Component {
 }
 
 FiltersDropdown.propTypes = {
-	filteringCategory: PropTypes.string.isRequired,
+	filterType: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired
 }
 
