@@ -1,9 +1,9 @@
 .TopBar {
-	display: flex;
-	flex-direction: column;
-	background-color: $mahogany;
-	.TopBar-header {
-		display: flex;
-		flex-direction: row;
-	}
+  display: flex;
+  flex-direction: column;
+  background-color: $mahogany;
+  color: $chiffon;
+  .TopBar-header {
+    text-align: center;
+  }
 }

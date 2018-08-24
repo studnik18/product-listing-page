@@ -3,22 +3,25 @@
 .TopBar {
   display: flex;
   flex-direction: column;
-  background-color: #48120e; }
+  background-color: #48120e;
+  color: #f8f3e6; }
   .TopBar .TopBar-header {
-    display: flex;
-    flex-direction: row; }
+    text-align: center; }
 
 .Footer {
   position: absolute;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+  background-color: #48120e;
+  color: #f8f3e6;
+  height: 40vw; }
 
 .ProductsList {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 45vw;
   background-color: #e7cc8f; }
 
 .SingleItemTile {
@@ -28,6 +31,16 @@
   background-color: #efaa52;
   margin: 4vw 0;
   padding: 3vw; }
+  .SingleItemTile .SingleItemTile-name {
+    color: #ab3e16; }
+  .SingleItemTile .SingleItemTile-price {
+    color: #f8f3e6; }
+
+.FiltersDropdown {
+  border: 1px solid #f8f3e6; }
+  .FiltersDropdown .FiltersDropdown-openButton {
+    width: 100%;
+    color: #f8f3e6; }
 
 #root {
   height: 100%; }

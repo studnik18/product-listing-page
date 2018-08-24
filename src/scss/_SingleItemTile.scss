@@ -5,4 +5,12 @@
   background-color: $buttercup;
   margin: 4vw 0;
   padding: 3vw;
+
+  .SingleItemTile-name {
+    color: $rust;
+  }
+
+  .SingleItemTile-price {
+    color: $chiffon;
+  }
 }

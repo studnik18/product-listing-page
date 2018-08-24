@@ -4,58 +4,55 @@ import Filter from './Filter';
 import Popover from '@material-ui/core/Popover';
 
 class FiltersDropdown extends Component {
-
-	constructor(props) {
-		super(props);
-		this.state = {
-			anchorEl: null
-		};
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      anchorEl: null,
+    };
+  }
 
   handleClick = event => {
-  	this.setState({
-  		anchorEl: event.currentTarget
-  	})
+    this.setState({
+      anchorEl: event.currentTarget,
+    });
   };
 
   handleClose = () => {
-  	this.setState({
-  		anchorEl: null
-  	})
-  }
+    this.setState({
+      anchorEl: null,
+    });
+  };
 
-	render() {
-		const { anchorEl } = this.state;
-		const { filterType, children } = this.props;
-		const open = Boolean(anchorEl);
-		return (
-			<Fragment>
-				<button onClick={this.handleClick}>
-					{filterType}
-				</button>
-				<Popover
-					open={open}
-					anchorEl={anchorEl}
-					anchorOrigin={{
-						vertical: 'bottom',
-						horizontal: 'left'
-					}}
-					onClose={this.handleClose}
-				>
-          {React.Children.map(
-            children,
-            child => React.cloneElement(
-              child, {filterType}
-          ))}
-				</Popover>
-			</Fragment>
-		)
-	}
+  render() {
+    const { anchorEl } = this.state;
+    const { filterType, children } = this.props;
+    const open = Boolean(anchorEl);
+    return (
+      <Fragment>
+        <div className="FiltersDropdown">
+          <button className="FiltersDropdown-openButton" onClick={this.handleClick}>
+            {filterType}
+          </button>
+        </div>
+        <Popover
+          open={open}
+          anchorEl={anchorEl}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          onClose={this.handleClose}
+        >
+          {React.Children.map(children, child => React.cloneElement(child, { filterType }))}
+        </Popover>
+      </Fragment>
+    );
+  }
 }
 
 FiltersDropdown.propTypes = {
-	filterType: PropTypes.string.isRequired,
-	children: PropTypes.node.isRequired
-}
+  filterType: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default FiltersDropdown;
