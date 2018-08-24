@@ -10,7 +10,6 @@ import { fetchProducts } from '../redux/actions';
 import { products } from '../data/productsData';
 
 class ProductsList extends Component {
-
 	componentDidMount() {
 		this.props.fetchProducts(products);
 	}
@@ -19,33 +18,30 @@ class ProductsList extends Component {
 		const { visibleProducts } = this.props;
 		return (
 			<div className="ProductsList">
-				{
-					visibleProducts.map(product => (
-						<SingleItemTile
-							key={product.id}
-							name={product.name}
-							variants={product.variants}
-						/>
-					))
-				}
+				{visibleProducts.map(product => (
+					<SingleItemTile key={product.id} name={product.name} variants={product.variants} />
+				))}
 			</div>
-		)
+		);
 	}
 }
 
 ProductsList.propTypes = {
 	fetchProducts: PropTypes.func.isRequired,
 	visibleProducts: PropTypes.array.isRequired,
-}
+};
 
 const mapStateToProps = state => ({
-	visibleProducts: getVisibleProducts(state)
+	visibleProducts: getVisibleProducts(state),
 });
 
 const mapDispatchToProps = dispatch => ({
 	fetchProducts: products => {
-		dispatch(fetchProducts(products))
-	}
-})
+		dispatch(fetchProducts(products));
+	},
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(ProductsList);

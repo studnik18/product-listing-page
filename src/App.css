@@ -14,11 +14,30 @@
   width: 100%; }
 
 .ProductsList {
-  padding-bottom: 60px; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: #e7cc8f; }
+
+.SingleItemTile {
+  min-width: 300px;
+  width: 90vw;
+  max-width: 500px;
+  background-color: #efaa52;
+  margin: 4vw 0;
+  padding: 3vw; }
 
 #root {
   height: 100%; }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
 .App {
   min-height: 100%;
-  position: relative; }
+  position: relative;
+  font-family: 'Open Sans', sans-serif; }

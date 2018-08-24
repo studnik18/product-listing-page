@@ -35,12 +35,12 @@
   "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
     "react-test-renderer": "^16.4.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "CI=true npm test && CI=true npm run build"
+      "pre-commit": "lint-staged"
     }
   }
 }

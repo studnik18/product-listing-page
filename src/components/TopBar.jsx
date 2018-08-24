@@ -21,6 +21,7 @@ const TopBar = () => (
 				<Filter value="Red" />
 				<Filter value="White" />
 				<Filter value="Yellow" />
+				<Filter value="Green" />
 			</FiltersDropdown>
 		</div>
 	</div>
