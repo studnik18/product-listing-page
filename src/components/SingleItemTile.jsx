@@ -6,14 +6,11 @@ import { connect } from 'react-redux';
 
 const SingleItemTile = ({ name, img, categories, variants, filters }) => {
 	return (
-		checkCategoryFilter(categories, filters.Category) && 
-		checkColorFilter(variants, filters.Color)
-		? <div className="SingleItemTile">
-				<img />
-				<p>{name}</p>
-				<VariantsBox variants={variants} />
-			</div>
-		: null
+		<div className="SingleItemTile">
+			<img />
+			<p>{name}</p>
+			<VariantsBox variants={variants} />
+		</div>
 	)
 };
 

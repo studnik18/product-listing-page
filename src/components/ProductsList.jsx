@@ -1,13 +1,17 @@
 import React from 'react';
 import SingleItemTile from './SingleItemTile';
+import { connect } from 'react-redux';
+import { getVisibleProducts } from '../redux/selectors';
 import { products } from '../data/productsData';
 
-const ProductsList = () => (
+
+
+const ProductsList = ({ visibleProducts }) => (
 	<div className="ProductsList">
 		{
-			products.map(product => (
-				<SingleItemTile 
-					key={product.id} 
+			visibleProducts.map(product => (
+				<SingleItemTile
+					key={product.id}
 					name={product.name}
 					img={product.img}
 					categories={product.categories}
@@ -18,4 +22,8 @@ const ProductsList = () => (
 	</div>
 )
 
-export default ProductsList;
+const mapStateToProps = state => ({
+	visibleProducts: getVisibleProducts(state)
+})
+
+export default connect(mapStateToProps, null)(ProductsList);
