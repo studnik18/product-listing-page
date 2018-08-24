@@ -1,7 +1,6 @@
 import * as actionTypes from '../constants/actionTypes';
-import { products } from '../../data/productsData';
 
-const initialState = { filters: { Category: [], Color: [] }, products};
+const initialState = { filters: { Category: [], Color: [] }};
 
 export const handleFilters = ( state = initialState, action ) => {
 	switch(action.type) {

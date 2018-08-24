@@ -9,12 +9,12 @@ const Filter = props => {
 	return (
 		<div>
 			{value}
-			<input 
-				type="checkbox" 
+			<input
+				type="checkbox"
 				checked={concatenatedFilters.includes(value)}
 				onChange={(e) => {
-					e.target.checked 
-					? addFilter(value, filterType) 
+					e.target.checked
+					? addFilter(value, filterType)
 					: removeFilter(value, filterType)
 				}}
 			/>

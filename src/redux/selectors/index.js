@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 
 const getFilters = state => state.handleFilters.filters;
-const getProducts = state => state.handleFilters.products;
+const getProducts = state => state.handleProductList.products;
 
 export const getVisibleProducts = createSelector(
   [ getFilters, getProducts ],
