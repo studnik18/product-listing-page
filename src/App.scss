@@ -3,13 +3,22 @@
 @import './scss/TopBar';
 @import './scss/Footer';
 @import './scss/ProductsList';
-
+@import './scss/SingleItemTile';
+@import './scss/SelectProductVariant';
+@import './scss/FiltersDropdown';
 
 #root {
-	height: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 .App {
-	min-height: 100%;
-	position: relative;
+  min-height: 100%;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
 }
