@@ -7,32 +7,26 @@ export const products = [
 		],
 		variants: [
 			{
-				color: "Black",
-				price: "300$",
-				img: ""
-			},
-			{
 				color: "Green",
 				price: "320$",
-				img: ""
+				img: "/img/awesome-road-green.jpg"
 			},
 			{
 				color: "Blue",
 				price: "350$",
-				img: ""
+				img: "/img/awesome-road-blue.jpg"
 			},
 			{
 				color: "Yellow",
-				price: "400$",
-				img: ""
+				price: "330$",
+				img: "/img/awesome-road-yellow.jpg"
 			},
 			{
-				color: "White",
-				price: "420$",
-				img: ""
+				color: "Red",
+				price: "310$",
+				img: "/img/awesome-road-red.jpg"
 			},
-		],
-		activeVariant: 1
+		]
 	},
 	{
 		id: 2,
@@ -42,32 +36,26 @@ export const products = [
 		],
 		variants: [
 			{
-				color: "Black",
+				color: "Blue",
 				price: "330$",
-				img: ""
+				img: "/img/cool-road-blue.jpg"
 			},
 			{
 				color: "Green",
 				price: "360$",
-				img: ""
+				img: "/img/cool-road-green.jpg"
 			},
 			{
-				color: "Blue",
-				price: "380$",
-				img: ""
+				color: "Red",
+				price: "350$",
+				img: "/img/cool-road-red.jpg"
 			},
 			{
 				color: "Yellow",
-				price: "420$",
-				img: ""
-			},
-			{
-				color: "White",
-				price: "440$",
-				img: ""
-			},
-		],
-		activeVariant: 1
+				price: "340$",
+				img: "/img/cool-road-yellow.jpg"
+			}
+		]
 	},
 	{
 		id: 3,
@@ -79,30 +67,24 @@ export const products = [
 			{
 				color: "Black",
 				price: "330$",
-				img: ""
+				img: "/img/awesome-trekking-black.jpg"
 			},
 			{
 				color: "Green",
 				price: "360$",
-				img: ""
+				img: "/img/awesome-trekking-green.jpg"
 			},
 			{
 				color: "Blue",
-				price: "380$",
-				img: ""
-			},
-			{
-				color: "Yellow",
-				price: "420$",
-				img: ""
+				price: "340$",
+				img: "/img/awesome-trekking-blue.jpg"
 			},
 			{
 				color: "White",
-				price: "440$",
-				img: ""
+				price: "350$",
+				img: "/img/awesome-trekking-white.jpg"
 			},
-		],
-		activeVariant: 1
+		]
 	},
 	{
 		id: 4,
@@ -114,30 +96,24 @@ export const products = [
 			{
 				color: "Black",
 				price: "330$",
-				img: ""
+				img: "/img/cool-trekking-black.jpg"
 			},
 			{
-				color: "Green",
+				color: "Red",
 				price: "360$",
-				img: ""
+				img: "/img/cool-trekking-red.jpg"
 			},
 			{
 				color: "Blue",
 				price: "380$",
-				img: ""
+				img: "/img/cool-trekking-blue.jpg"
 			},
 			{
 				color: "Yellow",
 				price: "420$",
-				img: ""
-			},
-			{
-				color: "White",
-				price: "440$",
-				img: ""
-			},
-		],
-		activeVariant: 1
+				img: "/img/cool-trekking-yellow.jpg"
+			}
+		]
 	},
 	{
 		id: 5,
@@ -149,30 +125,24 @@ export const products = [
 			{
 				color: "Black",
 				price: "330$",
-				img: ""
+				img: "/img/awesome-mountain-black.jpg"
 			},
 			{
 				color: "Green",
 				price: "360$",
-				img: ""
+				img: "/img/awesome-mountain-green.jpg"
 			},
 			{
-				color: "Blue",
-				price: "380$",
-				img: ""
-			},
-			{
-				color: "Yellow",
-				price: "420$",
-				img: ""
+				color: "Red",
+				price: "340$",
+				img: "/img/awesome-mountain-red.jpg"
 			},
 			{
 				color: "White",
-				price: "440$",
-				img: ""
-			},
-		],
-		activeVariant: 1
+				price: "350$",
+				img: "/img/awesome-mountain-white.jpg"
+			}
+		]
 	},
 	{
 		id: 6,
@@ -184,30 +154,24 @@ export const products = [
 			{
 				color: "Black",
 				price: "330$",
-				img: ""
-			},
-			{
-				color: "Green",
-				price: "360$",
-				img: ""
+				img: "/img/cool-mountain-black.jpg"
 			},
 			{
 				color: "Blue",
-				price: "380$",
-				img: ""
+				price: "350$",
+				img: "/img/cool-mountain-blue.jpg"
 			},
 			{
 				color: "Yellow",
-				price: "420$",
-				img: ""
+				price: "340$",
+				img: "/img/cool-mountain-yellow.jpg"
 			},
 			{
 				color: "White",
-				price: "440$",
-				img: ""
+				price: "360$",
+				img: "/img/cool-mountain-white.jpg"
 			},
-		],
-		activeVariant: 1
+		]
 	},
 	{
 		id: 7,
@@ -217,32 +181,26 @@ export const products = [
 		],
 		variants: [
 			{
-				color: "Black",
+				color: "Red",
 				price: "330$",
-				img: ""
+				img: "/img/awesome-city-red.jpg"
 			},
 			{
 				color: "Green",
 				price: "360$",
-				img: ""
+				img: "/img/awesome-city-green.jpg"
 			},
 			{
 				color: "Blue",
-				price: "380$",
-				img: ""
+				price: "350$",
+				img: "/img/awesome-city-blue.jpg"
 			},
 			{
 				color: "Yellow",
-				price: "420$",
-				img: ""
-			},
-			{
-				color: "White",
-				price: "440$",
-				img: ""
-			},
-		],
-		activeVariant: 1
+				price: "340$",
+				img: "/img/awesome-city-yellow.jpg"
+			}
+		]
 	},
 	{
 		id: 8,
@@ -252,11 +210,30 @@ export const products = [
 		],
 		variants: [
 			{
-				color: "Black",
+				color: "Blue",
 				price: "330$",
-				img: ""
+				img: "/img/cool-city-blue.jpg"
 			},
-		],
-		activeVariant: 1
-	},
+			{
+				color: "Green",
+				price: "340$",
+				img: "/img/cool-city-green.jpg"
+			},
+			{
+				color: "Red",
+				price: "350$",
+				img: "/img/cool-city-red.jpg"
+			},
+			{
+				color: "White",
+				price: "355$",
+				img: "/img/cool-city-white.jpg"
+			},
+			{
+				color: "Yellow",
+				price: "345$",
+				img: "/img/cool-city-yellow.jpg"
+			}
+		]
+	}
 ];
