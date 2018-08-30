@@ -1,7 +1,12 @@
 .FiltersDropdown {
   border: 1px solid $chiffon;
+  margin-bottom: 10px;
   .FiltersDropdown-openButton {
     width: 100%;
     color: $chiffon;
+    font-size: $medium;
+  }
+  .FiltersDropdown-Popover {
+    width: 100%;
   }
 }

@@ -42,6 +42,9 @@ class FiltersDropdown extends Component {
             horizontal: 'left',
           }}
           onClose={this.handleClose}
+          classes={{
+            paper: 'FiltersDropdown-Popover',
+          }}
         >
           {React.Children.map(children, child => React.cloneElement(child, { filterType }))}
         </Popover>

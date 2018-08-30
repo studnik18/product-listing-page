@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   background-color: #48120e;
+  padding: 25px;
   color: #f8f3e6; }
   .TopBar .TopBar-header {
-    text-align: center; }
+    text-align: center;
+    font-size: 24px; }
 
 .Footer {
   position: absolute;
@@ -37,10 +39,14 @@
     color: #f8f3e6; }
 
 .FiltersDropdown {
-  border: 1px solid #f8f3e6; }
+  border: 1px solid #f8f3e6;
+  margin-bottom: 10px; }
   .FiltersDropdown .FiltersDropdown-openButton {
     width: 100%;
-    color: #f8f3e6; }
+    color: #f8f3e6;
+    font-size: 16px; }
+  .FiltersDropdown .FiltersDropdown-Popover {
+    width: 100%; }
 
 #root {
   height: 100%; }
