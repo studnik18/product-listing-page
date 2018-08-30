@@ -32,9 +32,11 @@ class SingleItemTile extends Component {
     const variants = this.getVariants();
     return (
       <div className="SingleItemTile">
-        <img src={variants[activeVariant].img} />
+        <div className="SingleItemTile-imageContainer">
+        	{variants && variants[activeVariant] && <img className="SingleItemTile-image" src={variants[activeVariant].img} />}
+        </div>
         <p className="SingleItemTile-name">{name}</p>
-        <p className="SingleItemTile-price">{variants[activeVariant].price}</p>
+        {variants && variants[activeVariant] && <p className="SingleItemTile-price">{variants[activeVariant].price}</p>}
         <SelectProductVariant
           variants={variants}
           handleClick={this.changeActiveVariant}
