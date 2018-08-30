@@ -8,4 +8,9 @@
     text-align: center;
     font-size: $xLarge;
   }
+  .TopBar-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

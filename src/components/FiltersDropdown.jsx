@@ -45,6 +45,9 @@ class FiltersDropdown extends Component {
           classes={{
             paper: 'FiltersDropdown-Popover',
           }}
+          ModalClasses={{
+            root: 'FiltersDropdown-modal',
+          }}
         >
           {React.Children.map(children, child => React.cloneElement(child, { filterType }))}
         </Popover>

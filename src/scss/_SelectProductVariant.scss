@@ -1,0 +1,45 @@
+@mixin boxShadow($color) {
+  box-shadow: 0 5px 10px 0 $color;
+}
+
+.SelectProductVariant-selectButton + .SelectProductVariant-selectButton {
+  margin-left: 10px;
+}
+
+.SelectProductVariant {
+  background-color: $chiffon;
+  border-radius: 10px;
+  padding: 10px 20px;
+
+  .SelectProductVariant-selectButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+  }
+
+  .SelectProductVariant-selectButton--Blue {
+    background-color: #6313f7;
+    @include boxShadow(#430da1);
+  }
+  .SelectProductVariant-selectButton--Black {
+    background-color: #000;
+    @include boxShadow(#000);
+  }
+  .SelectProductVariant-selectButton--Red {
+    background-color: #f51d11;
+    @include boxShadow(#b8160d);
+  }
+  .SelectProductVariant-selectButton--White {
+    background-color: #fff;
+    @include boxShadow(#fff);
+  }
+  .SelectProductVariant-selectButton--Yellow {
+    background-color: #fadb10;
+    @include boxShadow(#cfb50d);
+  }
+  .SelectProductVariant-selectButton--Green {
+    background-color: #25d10f;
+    @include boxShadow(#156908);
+  }
+}

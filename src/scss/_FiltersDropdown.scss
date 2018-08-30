@@ -1,12 +1,22 @@
 .FiltersDropdown {
   border: 1px solid $chiffon;
   margin-bottom: 10px;
+  width: 80vw;
+  transform: translateX(1px);
+  padding: 5px;
   .FiltersDropdown-openButton {
     width: 100%;
     color: $chiffon;
     font-size: $medium;
   }
-  .FiltersDropdown-Popover {
-    width: 100%;
-  }
+}
+
+.FiltersDropdown-modal .FiltersDropdown-Popover {
+  width: 100%;
+  border-radius: 0;
+  width: 80vw;
+  border: 1px solid $chiffon;
+  padding: 5px;
+  font-size: $medium;
+  background-color: $mahogany;
 }

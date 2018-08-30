@@ -1,0 +1,32 @@
+.Filter {
+  background-color: $vanilla;
+  color: $mahogany;
+  font-size: $medium;
+  padding: 10px 50px;
+  display: flex;
+  position: relative;
+
+  &:hover {
+    background-color: $chiffon;
+  }
+
+  .Filter-checkboxRoot {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $rust;
+    display: flex;
+    justify-content: flex-start;
+
+    &.Filter-checkbox--checked {
+      color: $rust;
+    }
+  }
+}
+
+.Filter + .Filter {
+  margin-top: 5px;
+}
