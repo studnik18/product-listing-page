@@ -31,7 +31,8 @@ class FiltersDropdown extends Component {
       <Fragment>
         <div className="FiltersDropdown">
           <button className="FiltersDropdown-openButton" onClick={this.handleClick}>
-            {filterType}
+            <span>{filterType}</span>
+            &#x025BD;
           </button>
         </div>
         <Popover

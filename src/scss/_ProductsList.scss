@@ -6,3 +6,11 @@
   padding-bottom: 45vw;
   background-color: $vanilla;
 }
+
+@media screen and (min-width: 700px) {
+  .ProductsList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

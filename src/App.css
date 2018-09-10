@@ -21,6 +21,8 @@
   background-color: #48120e;
   color: #f8f3e6;
   height: 40vw; }
+  .Footer .Footer-socialMedia {
+    text-align: center; }
 
 .ProductsList {
   display: flex;
@@ -30,23 +32,36 @@
   padding-bottom: 45vw;
   background-color: #e7cc8f; }
 
+@media screen and (min-width: 700px) {
+  .ProductsList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; } }
+
 .SingleItemTile {
   min-width: 300px;
   width: 90vw;
-  max-width: 500px;
+  max-width: 400px;
   background-color: #efaa52;
   margin: 4vw 0;
-  padding: 3vw;
+  padding: 4%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  border-radius: 10px; }
   .SingleItemTile .SingleItemTile-name {
-    color: #ab3e16; }
+    color: #ab3e16;
+    font-size: 20px;
+    font-weight: 600; }
   .SingleItemTile .SingleItemTile-price {
-    color: #f8f3e6; }
+    color: #f8f3e6;
+    margin-top: 0;
+    font-size: 24px; }
   .SingleItemTile .SingleItemTile-imageContainer {
     width: 82vw;
+    max-width: 370px;
     height: 63vw;
+    max-height: 292px;
     background-color: white;
     display: flex;
     align-items: center; }
@@ -54,6 +69,16 @@
     width: 100%;
     height: 100%;
     object-fit: contain; }
+
+.SingleItemTile + .SingleItemTile {
+  margin-right: 20px; }
+
+@media screen and (min-width: 700px) {
+  .SingleItemTile {
+    width: 40vw; }
+    .SingleItemTile .SingleItemTile-imageContainer {
+      width: 35vw;
+      height: 30vw; } }
 
 .SelectProductVariant-selectButton + .SelectProductVariant-selectButton {
   margin-left: 10px; }
@@ -66,7 +91,18 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: none; }
+    border: none;
+    position: relative;
+    outline: none; }
+  .SelectProductVariant .SelectProductVariant-selectButton--active::after {
+    content: '';
+    border-bottom: 5px solid #ab3e16;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 2px;
+    left: 0; }
   .SelectProductVariant .SelectProductVariant-selectButton--Blue {
     background-color: #6313f7;
     box-shadow: 0 5px 10px 0 #430da1; }
@@ -78,7 +114,7 @@
     box-shadow: 0 5px 10px 0 #b8160d; }
   .SelectProductVariant .SelectProductVariant-selectButton--White {
     background-color: #fff;
-    box-shadow: 0 5px 10px 0 #fff; }
+    box-shadow: 0 5px 10px 0 #ebe9e7; }
   .SelectProductVariant .SelectProductVariant-selectButton--Yellow {
     background-color: #fadb10;
     box-shadow: 0 5px 10px 0 #cfb50d; }
@@ -95,7 +131,11 @@
   .FiltersDropdown .FiltersDropdown-openButton {
     width: 100%;
     color: #f8f3e6;
-    font-size: 16px; }
+    background-color: #48120e;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between; }
 
 .FiltersDropdown-modal .FiltersDropdown-Popover {
   width: 100%;

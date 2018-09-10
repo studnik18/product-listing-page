@@ -16,6 +16,19 @@
     height: 30px;
     border-radius: 50%;
     border: none;
+    position: relative;
+    outline: none;
+  }
+
+  .SelectProductVariant-selectButton--active::after {
+    content: '';
+    border-bottom: 5px solid $rust;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 2px;
+    left: 0;
   }
 
   .SelectProductVariant-selectButton--Blue {
@@ -32,7 +45,7 @@
   }
   .SelectProductVariant-selectButton--White {
     background-color: #fff;
-    @include boxShadow(#fff);
+    @include boxShadow(#ebe9e7);
   }
   .SelectProductVariant-selectButton--Yellow {
     background-color: #fadb10;
