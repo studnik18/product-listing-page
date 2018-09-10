@@ -17,9 +17,7 @@ const SelectProductVariant = ({ variants, activeVariant, handleClick, filters })
           onClick={() => {
             handleClick(variants.indexOf(variant));
           }}
-        >
-          {variant.color}
-        </button>
+        />
       ))}
     </div>
   );

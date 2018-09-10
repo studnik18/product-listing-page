@@ -31,7 +31,8 @@ class FiltersDropdown extends Component {
       <Fragment>
         <div className="FiltersDropdown">
           <button className="FiltersDropdown-openButton" onClick={this.handleClick}>
-            {filterType}
+            <span>{filterType}</span>
+            &#x025BD;
           </button>
         </div>
         <Popover
@@ -42,6 +43,12 @@ class FiltersDropdown extends Component {
             horizontal: 'left',
           }}
           onClose={this.handleClose}
+          classes={{
+            paper: 'FiltersDropdown-Popover',
+          }}
+          ModalClasses={{
+            root: 'FiltersDropdown-modal',
+          }}
         >
           {React.Children.map(children, child => React.cloneElement(child, { filterType }))}
         </Popover>

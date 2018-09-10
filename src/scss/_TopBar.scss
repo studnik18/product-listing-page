@@ -2,8 +2,15 @@
   display: flex;
   flex-direction: column;
   background-color: $mahogany;
+  padding: 25px;
   color: $chiffon;
   .TopBar-header {
     text-align: center;
+    font-size: $xLarge;
+  }
+  .TopBar-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

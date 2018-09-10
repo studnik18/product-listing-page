@@ -4,9 +4,15 @@
   display: flex;
   flex-direction: column;
   background-color: #48120e;
+  padding: 25px;
   color: #f8f3e6; }
   .TopBar .TopBar-header {
-    text-align: center; }
+    text-align: center;
+    font-size: 24px; }
+  .TopBar .TopBar-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 .Footer {
   position: absolute;
@@ -15,6 +21,8 @@
   background-color: #48120e;
   color: #f8f3e6;
   height: 40vw; }
+  .Footer .Footer-socialMedia {
+    text-align: center; }
 
 .ProductsList {
   display: flex;
@@ -24,23 +32,36 @@
   padding-bottom: 45vw;
   background-color: #e7cc8f; }
 
+@media screen and (min-width: 700px) {
+  .ProductsList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; } }
+
 .SingleItemTile {
   min-width: 300px;
   width: 90vw;
-  max-width: 500px;
+  max-width: 400px;
   background-color: #efaa52;
   margin: 4vw 0;
-  padding: 3vw;
+  padding: 4%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  border-radius: 10px; }
   .SingleItemTile .SingleItemTile-name {
-    color: #ab3e16; }
+    color: #ab3e16;
+    font-size: 20px;
+    font-weight: 600; }
   .SingleItemTile .SingleItemTile-price {
-    color: #f8f3e6; }
+    color: #f8f3e6;
+    margin-top: 0;
+    font-size: 24px; }
   .SingleItemTile .SingleItemTile-imageContainer {
     width: 82vw;
+    max-width: 370px;
     height: 63vw;
+    max-height: 292px;
     background-color: white;
     display: flex;
     align-items: center; }
@@ -49,11 +70,106 @@
     height: 100%;
     object-fit: contain; }
 
+.SingleItemTile + .SingleItemTile {
+  margin-right: 20px; }
+
+@media screen and (min-width: 700px) {
+  .SingleItemTile {
+    width: 40vw; }
+    .SingleItemTile .SingleItemTile-imageContainer {
+      width: 35vw;
+      height: 30vw; } }
+
+.SelectProductVariant-selectButton + .SelectProductVariant-selectButton {
+  margin-left: 10px; }
+
+.SelectProductVariant {
+  background-color: #f8f3e6;
+  border-radius: 10px;
+  padding: 10px 20px; }
+  .SelectProductVariant .SelectProductVariant-selectButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    outline: none; }
+  .SelectProductVariant .SelectProductVariant-selectButton--active::after {
+    content: '';
+    border-bottom: 5px solid #ab3e16;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 2px;
+    left: 0; }
+  .SelectProductVariant .SelectProductVariant-selectButton--Blue {
+    background-color: #6313f7;
+    box-shadow: 0 5px 10px 0 #430da1; }
+  .SelectProductVariant .SelectProductVariant-selectButton--Black {
+    background-color: #000;
+    box-shadow: 0 5px 10px 0 #000; }
+  .SelectProductVariant .SelectProductVariant-selectButton--Red {
+    background-color: #f51d11;
+    box-shadow: 0 5px 10px 0 #b8160d; }
+  .SelectProductVariant .SelectProductVariant-selectButton--White {
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 #ebe9e7; }
+  .SelectProductVariant .SelectProductVariant-selectButton--Yellow {
+    background-color: #fadb10;
+    box-shadow: 0 5px 10px 0 #cfb50d; }
+  .SelectProductVariant .SelectProductVariant-selectButton--Green {
+    background-color: #25d10f;
+    box-shadow: 0 5px 10px 0 #156908; }
+
 .FiltersDropdown {
-  border: 1px solid #f8f3e6; }
+  border: 1px solid #f8f3e6;
+  margin-bottom: 10px;
+  width: 80vw;
+  transform: translateX(1px);
+  padding: 5px; }
   .FiltersDropdown .FiltersDropdown-openButton {
     width: 100%;
-    color: #f8f3e6; }
+    color: #f8f3e6;
+    background-color: #48120e;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between; }
+
+.FiltersDropdown-modal .FiltersDropdown-Popover {
+  width: 100%;
+  border-radius: 0;
+  width: 80vw;
+  border: 1px solid #f8f3e6;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #48120e; }
+
+.Filter {
+  background-color: #e7cc8f;
+  color: #48120e;
+  font-size: 16px;
+  padding: 10px 50px;
+  display: flex;
+  position: relative; }
+  .Filter:hover {
+    background-color: #f8f3e6; }
+  .Filter .Filter-checkboxRoot {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ab3e16;
+    display: flex;
+    justify-content: flex-start; }
+    .Filter .Filter-checkboxRoot.Filter-checkbox--checked {
+      color: #ab3e16; }
+
+.Filter + .Filter {
+  margin-top: 5px; }
 
 #root {
   height: 100%; }

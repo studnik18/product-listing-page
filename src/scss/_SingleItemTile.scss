@@ -1,25 +1,32 @@
 .SingleItemTile {
   min-width: 300px;
   width: 90vw;
-  max-width: 500px;
+  max-width: 400px;
   background-color: $buttercup;
   margin: 4vw 0;
-  padding: 3vw;
+  padding: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 
   .SingleItemTile-name {
     color: $rust;
+    font-size: $large;
+    font-weight: 600;
   }
 
   .SingleItemTile-price {
     color: $chiffon;
+    margin-top: 0;
+    font-size: $xLarge;
   }
 
   .SingleItemTile-imageContainer {
     width: 82vw;
+    max-width: 370px;
     height: 63vw;
+    max-height: 292px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -29,5 +36,19 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+.SingleItemTile + .SingleItemTile {
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .SingleItemTile {
+    width: 40vw;
+    .SingleItemTile-imageContainer {
+      width: 35vw;
+      height: 30vw;
+    }
   }
 }
