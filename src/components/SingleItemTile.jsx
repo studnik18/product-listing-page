@@ -33,7 +33,7 @@ class SingleItemTile extends Component {
     return (
       <div className="SingleItemTile">
         <div className="SingleItemTile-imageContainer">
-        	{variants && variants[activeVariant] && <img className="SingleItemTile-image" src={variants[activeVariant].img} />}
+        	{variants && variants[activeVariant] && <img className="SingleItemTile-image" src={`/product-listing-page${variants[activeVariant].img}`} />}
         </div>
         <p className="SingleItemTile-name">{name}</p>
         {variants && variants[activeVariant] && <p className="SingleItemTile-price">{variants[activeVariant].price}</p>}
